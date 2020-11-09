@@ -5,8 +5,10 @@
 -- To reset the sample schema, replace everything with
 -- two dots ('..' - without quotes).
 
+--*** NOTE *** - schema below was modified from QuickDBD export to account for the following syntax errors: 
+-- proper syntax to create a composite or compound key was not known (see dept_emp table)  
+
 CREATE TABLE "departments" (
-    "serial" id   NOT NULL,
     "dept_no" varchar(50)   NOT NULL,
     "dept_name" varchar(255)   NOT NULL,
     CONSTRAINT "pk_departments" PRIMARY KEY (
@@ -15,7 +17,6 @@ CREATE TABLE "departments" (
 );
 
 CREATE TABLE "employees" (
-    "serial" id   NOT NULL,
     "emp_no" int   NOT NULL,
     "emp_title_id" varchar(255)   NOT NULL,
     "birth_date" date   NOT NULL,
@@ -58,6 +59,9 @@ CREATE TABLE "titles" (
      )
 );
 
+ALTER TABLE "employees" ADD CONSTRAINT "fk_employees_emp_title_id" FOREIGN KEY("emp_title_id")
+REFERENCES "titles" ("title_id");
+
 ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
@@ -72,7 +76,4 @@ REFERENCES "employees" ("emp_no");
 
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
-
-ALTER TABLE "titles" ADD CONSTRAINT "fk_titles_title_id" FOREIGN KEY("title_id")
-REFERENCES "employees" ("emp_title_id");
 

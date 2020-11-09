@@ -1,0 +1,44 @@
+# Modify this code to update the DB schema diagram.
+# To reset the sample schema, replace everything with
+# two dots ('..' - without quotes).
+
+--*** NOTE *** - schema below needs to modified from QuickDBD export to account for the following syntax errors: 
+-- proper QuickDBD syntax to create a composite or compound key was not known (see dept_emp table)  
+
+departments
+-
+dept_no varchar(50) PK
+dept_name varchar(255) 
+
+employees
+-
+emp_no int PK
+emp_title_id varchar(255) FK >- titles.title_id
+birth_date date
+first_name varchar(255)
+last_name varchar(255) 
+sex varchar(50)
+hire_date date
+
+dept_emp
+-
+emp_no int FK >- employees.emp_no
+dept_no varchar(50) FK >- departments.dept_no
+#primary key (emp_no, dept_no)
+
+dept_manager
+-
+dept_no varchar(50) FK >- departments.dept_no
+emp_no int PK FK - employees.emp_no
+
+salaries
+-
+emp_no int PK FK - employees.emp_no
+salary int
+
+titles  
+-
+title_id varchar(50) PK
+title varchar(255)
+
+
