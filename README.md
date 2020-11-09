@@ -1,6 +1,6 @@
 # Pewlett Hackard Employee Analysis
 
-![Title](/EmployeeSQL/Images/employees.jpeg)
+!(/EmployeeSQL/Images/employees.jpg)
 
 ## Table of contents
 * [Assignment](#assignment)
