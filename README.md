@@ -1,12 +1,12 @@
 # Pewlett Hackard Employee Analysis
 
-!(/EmployeeSQL/Images/employees.jpg)
+![Title](EmployeeSQL/Images/employees.jpg)
 
 ## Table of contents
 * [Assignment](#assignment)
 * [Data Sources](#data_sources)
 * [Evaluation and Results](#eval_results)
-* [Sources](#sources)
+* [References](#ref)
 
 
 ## Assignment
@@ -24,5 +24,5 @@ Six (6) csv files contained information on employees from the requested time per
 Link to data sources: https://github.com/KLacerda08/sql-challenge/tree/main/EmployeeSQL/Resources 
 
 
-![Sources](Images/read_me/data_source.PNG)
+## References
 1. image source: https://plandisc.com/en/hr-cycle-calendar/ 
