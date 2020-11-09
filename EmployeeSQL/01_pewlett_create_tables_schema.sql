@@ -1,12 +1,5 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
--- Modify this code to update the DB schema diagram.
--- To reset the sample schema, replace everything with
--- two dots ('..' - without quotes).
-
---*** NOTE *** - schema below was modified from QuickDBD export to account for the following syntax errors: 
--- proper syntax to create a composite or compound key was not known (see dept_emp table)  
 
 CREATE TABLE "departments" (
     "dept_no" varchar(50)   NOT NULL,
@@ -31,10 +24,11 @@ CREATE TABLE "employees" (
 
 CREATE TABLE "dept_emp" (
     "emp_no" int   NOT NULL,
-    "dept_no" varchar(50)   NOT NULL
+    "dept_no" varchar(50)   NOT NULL,
+	primary key (emp_no, dept_no)
 );
 
--- primary key (emp_no, dept_no)
+
 CREATE TABLE "dept_manager" (
     "dept_no" varchar(50)   NOT NULL,
     "emp_no" int   NOT NULL,
@@ -76,4 +70,6 @@ REFERENCES "employees" ("emp_no");
 
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
+
+
 
