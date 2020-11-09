@@ -4,7 +4,7 @@
 
 ## Table of contents
 * [Assignment](#assignment)
-* [Data Sources](#data_sources)
+* [Data Sources and Assumptions](#data_sources)
 * [Evaluation and Results](#eval_results)
 * [References](#ref)
 
@@ -54,14 +54,14 @@ The following employee statistics were queried:
 6. List all employees in the Sales department, including their employee number, last name, first name, and department name. There were 52,245 
    employees in the Sales department.  
 
-7. List all employees in the Sales and Development departments, with the same attributes as item 6 above:  137,952 employees were in the Sales and  
-   Development departments.
+7. List all employees in the Sales and Development departments, with the same attributes as item 6 above:  137,952 employees were in the Sales 
+   and Development departments.
 
 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.  There were 1638 unique 
    last names, with up to 226 people sharing the same last name.  
 
 Based on the analysis, an uncommonly high number of people share last names, and/or have names that are relatively uncommon to the general 
-population (e.g. "Hercules").  Additionally, the number of department managers (24) seems very low for the number of overall employees (300,024).
+population (e.g. "Hercules").  Additionally, the number of department managers (24) seems low for the number of overall employees (300,024).
 These results should be viewed with some scrutiny and may benefit from additonal analysis.  
 
 ## References
